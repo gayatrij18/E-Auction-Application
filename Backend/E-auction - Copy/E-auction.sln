@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-auction", "E-auction.csproj", "{BB028A99-8F2A-4955-AB53-193FB917DB8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB028A99-8F2A-4955-AB53-193FB917DB8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB028A99-8F2A-4955-AB53-193FB917DB8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB028A99-8F2A-4955-AB53-193FB917DB8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB028A99-8F2A-4955-AB53-193FB917DB8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {43D0CCC9-C17D-4E9F-921A-50DD4001D2E4}
+	EndGlobalSection
+EndGlobal

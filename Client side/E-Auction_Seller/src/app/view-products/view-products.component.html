@@ -1,0 +1,130 @@
+<app-header></app-header>
+
+<!-- 
+<div class = "child" >
+<mat-selection-list #shoes [multiple]="false" >
+    <mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe">
+      {{shoe}}s
+    </mat-list-option>
+</mat-selection-list>
+</div>
+  
+  <p class = "child">
+    Option selected: {{shoes.selectedOptions.selected[0]?.value}}
+  </p>
+   -->
+
+   <h2>Listed Products</h2>
+   <div class="child">
+    <ul class="heroes">
+      <li *ngFor="let hero of columnNames">
+        <button
+          [class.selected]="hero === selectedHero"
+          type="button"
+          (click)="onSelect(hero)"
+        >
+          <span class="badge">{{ hero.id }}</span>
+          <span class="name">{{ hero.productName }}</span>
+        </button>
+      </li>
+    </ul>
+    
+   </div>
+
+
+
+<div *ngIf="selectedHero" >
+  <h2>{{ selectedHero.productName | uppercase }} Details</h2>
+
+  <mat-form-field appearance="standard">
+    <mat-label>Filter table</mat-label>
+    <input matInput placeholder="" search (keyup) = "applyFilter($event)" />
+  </mat-form-field>
+  <div class = "mat-elevation-z8">
+  
+  <table mat-table matSort [dataSource]="dataSource" #input>
+    <ng-container matColumnDef = "id"> 
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Product Id</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.id}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef = "productName">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Product Name</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.productName}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef = "shortDescription">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Short Description</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.shortDescription}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef = "detailedDescription">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Detailed Description</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.detailedDescription}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef = "category">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Category</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.category}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef = "startingPrice">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Body</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.startingPrice}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef = "bidEndDate">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Bid End Date</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.bidEndDate}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef = "firstName">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>First Name</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.firstName}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef = "lastName">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Last Name</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.lastName}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef = "bidAmount">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Bid Amount</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{row.bidAmount}}</mat-cell>
+    </ng-container>
+
+
+
+    <mat-header-row *matHeaderRowDef="bidsColumns"></mat-header-row>
+    <mat-header-row *matRowDef="let row; columns: bidsColumns "></mat-header-row>
+
+    <tr class = "mat-header-row" *matNoDataRow>
+      <td class = "mat-cell" colspan = "4">
+        Filter does not match any item in the data for text {{filterValue}}
+      </td>
+    </tr>
+
+    
+  </table>  
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-labels="select page of users"></mat-paginator>
+
+ 
+  </div>
+</div>
+
+
+<!-- 
+<div *ngIf="selectedHero">
+  <h2>{{ selectedHero.productName | uppercase }} Details</h2>
+  <div>id: {{ selectedHero.id }}</div>
+  <div>
+    <label for="hero-name">Hero name: </label>
+    <input id="hero-name" [(ngModel)]="selectedHero.productName" placeholder="name" />
+  </div>
+</div> -->
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
