@@ -1,0 +1,10 @@
+<div *ngIf="!login">
+    <app-sidenav (onToggleSideNav)="onToggleSideNav($event)"></app-sidenav>
+    <app-display-products
+        [collapsed]="isSideNavCollapsed"
+        [screenWidth]="screenWidth"
+    ></app-display-products>
+
+</div>
+
+<router-outlet></router-outlet>

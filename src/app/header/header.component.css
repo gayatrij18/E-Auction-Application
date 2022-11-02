@@ -1,0 +1,8 @@
+.tool-bar1{
+    /* background: rgb(237,145,60);
+    background: radial-gradient(circle, rgba(237,145,60,1) 46%, rgba(221,28,67,1) 100%); */
+    
+    background: rgb(2,0,36);
+background: linear-gradient(56deg, rgba(2,0,36,1) 0%, rgba(183,236,206,1) 0%, rgba(159,179,201,1) 12%, rgba(120,189,218,1) 14%, rgba(220,203,236,1) 70%);
+  }
+ 
