@@ -16,8 +16,13 @@
 
 .outer{
     height: 100vh;
-    background: rgb(2,0,36);
-    background: linear-gradient(56deg, rgba(2,0,36,1) 0%, rgba(183,236,206,1) 0%, rgba(159,179,201,1) 12%, rgba(120,189,218,1) 14%, rgba(220,203,236,1) 70%);;
+    background: rgb(196,232,253);
+    background: -moz-linear-gradient(234deg, rgba(196,232,253,1) 0%, rgba(217,244,254,1) 18%, rgba(255,243,255,1) 48%, rgba(209,246,236,1) 100%);
+    background: -webkit-linear-gradient(234deg, rgba(196,232,253,1) 0%, rgba(217,244,254,1) 18%, rgba(255,243,255,1) 48%, rgba(209,246,236,1) 100%);
+    background: linear-gradient(234deg, rgba(196,232,253,1) 0%, rgba(217,244,254,1) 18%, rgba(255,243,255,1) 48%, rgba(209,246,236,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c4e8fd",endColorstr="#d1f6ec",GradientType=1);
+    /* background: rgb(2,0,36);
+    background: linear-gradient(56deg, rgba(2,0,36,1) 0%, rgba(183,236,206,1) 0%, rgba(159,179,201,1) 12%, rgba(120,189,218,1) 14%, rgba(220,203,236,1) 70%);; */
 
 }
 

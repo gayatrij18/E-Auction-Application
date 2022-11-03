@@ -42,17 +42,17 @@ export class LoginComponent implements OnInit {
       let user1 = new User();
      // this.user1 = {cred.username, cred.password};
         //this.auth.login(this.loginForm.controls['username'])
-        console.log('onLogin user1', this.cred)
+       // console.log('onLogin user1', this.cred)
         this.auth.login(this.cred)
         .subscribe({
           next:(res:any)=>{
           
-            alert(res);
-            console.log('printing res inside login.c.ts=>',res);
-            console.log('printing res.JwtToken inside login.c.ts=>',res.jwtToken);
+            //alert(res);
+           console.log('printing res inside login.c.ts=>',res);
+           // console.log('printing res.JwtToken inside login.c.ts=>',res.jwtToken);
            // this.token = res.token;
             localStorage.setItem('token', res.jwtToken);
-            console.log('Printing token via localstorage inside login.c.ts',localStorage.getItem('token'));
+           // console.log('Printing token via localstorage inside login.c.ts',localStorage.getItem('token'));
             this.loginForm.reset();
             this.router.navigate(['view-products']);
           },

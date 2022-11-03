@@ -24,7 +24,7 @@ const routes: Routes = [
   {path: 'display-products', component:DisplayProductsComponent},
   {path: 'sidenav', component:SidenavComponent},
   {path: 'dashboard', component:DashboardComponent},
-  {path: 'products', component:ProductsComponent},
+  {path: 'products', component:ViewProductsComponent},
   {path: 'statistics', component:StatisticsComponent},
   {path: 'coupons', component:ViewProductsComponent},
   {path: 'pages', component:PagesComponent},
