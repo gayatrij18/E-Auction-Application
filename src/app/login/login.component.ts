@@ -19,8 +19,6 @@ export class LoginComponent implements OnInit {
   cred:any;
   token:any;
   constructor(private formBuilder:FormBuilder, private auth:AuthService, private router:Router) { }
-
-
   ngOnInit(): void {
     this.loginForm=this.formBuilder.group({
       username:['', Validators.required],
@@ -29,7 +27,8 @@ export class LoginComponent implements OnInit {
 
     if(localStorage.getItem('token') != null)
     {
-      this.router.navigateByUrl('/home');
+      console.log('token in login init',localStorage.getItem('token'));
+      //this.router.navigateByUrl('/dashboard');
     }
   }
 
@@ -40,19 +39,15 @@ export class LoginComponent implements OnInit {
       this.cred=this.loginForm.value;
       //let user1 = new User(id:0, FirstName:"string", LastName:"string", Username:this.auth.login(this.loginForm.controls['username']), Password:this.auth.login(this.loginForm.controls['password']), Token:"string", Role:"string", Email:"string");
       let user1 = new User();
-     // this.user1 = {cred.username, cred.password};
-        //this.auth.login(this.loginForm.controls['username'])
-       // console.log('onLogin user1', this.cred)
         this.auth.login(this.cred)
         .subscribe({
           next:(res:any)=>{
           
-            //alert(res);
            console.log('printing res inside login.c.ts=>',res);
            // console.log('printing res.JwtToken inside login.c.ts=>',res.jwtToken);
            // this.token = res.token;
             localStorage.setItem('token', res.jwtToken);
-           // console.log('Printing token via localstorage inside login.c.ts',localStorage.getItem('token'));
+           console.log('Printing token via localstorage inside login.c.ts',localStorage.getItem('token'));
             this.loginForm.reset();
             this.router.navigate(['view-products']);
           },

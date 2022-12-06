@@ -4,7 +4,6 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
-
 *{
     margin:0;
     padding: 0;
@@ -29,5 +28,25 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .card-body{
     padding: 1rem 1.5rem;
+
+}
+
+.snackbar .mat-simple-snackbar-action{
+    
+    color: lightgray;
+}
+
+.bar{
+      color: #263238;
+  }
+
+  .mat-progress-spinner circle, circle {
+    stroke: #3fb53f;
+
+    /* stroke: #263238; */
+    
+}
+
+.mat-spinner{
 
 }

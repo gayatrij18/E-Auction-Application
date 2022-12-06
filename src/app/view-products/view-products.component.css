@@ -103,6 +103,50 @@ table
   width:20%;
 }
 
+.deletion{
+  /* margin-top: 13px; */
+  color:  #2c3a41;
+
+
+}
+i{
+  margin-top: 13px;
+  font-size: larger;
+  vertical-align: middle;
+  padding-bottom: 2px;
+
+}
+
+input{
+  margin-top: 13px;
+  margin-left: 0px;
+  padding-left: 0.7px;
+  color: #263238;
+
+}
+
+.deletion i{
+  
+  color: red;
+  margin-left: 10px;
+  
+  /* margin-right: 1px; */
+}
+
+.blue-snackbar {
+  color: aquamarine !important;
+}
+
+.my-snack-bar button {
+  background-color: gray;
+  color: white;
+}
+
+.loader-container{
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
 /*
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that

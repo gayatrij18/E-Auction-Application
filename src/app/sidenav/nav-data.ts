@@ -7,8 +7,14 @@ export const navbarData = [
 
     {
         routerLink:'products',
-        icon:'fal fa-box-open',
+        icon:'fas fa-box-open',
         label:'Products'
+    },
+
+    {
+        routerLink:'add-product',
+        icon:'fas fa-cart-plus',
+        label:'Add product'
     },
 
     {
@@ -37,7 +43,9 @@ export const navbarData = [
     
     {
         routerLink:'settings',
-        icon:'fal fa-cog',
+        icon:'fas fa-cog',
         label:'Settings'
     }
+
+    
 ];

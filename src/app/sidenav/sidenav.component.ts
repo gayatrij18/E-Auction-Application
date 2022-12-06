@@ -1,11 +1,9 @@
 import { Component, OnInit, Output, EventEmitter, HostListener } from '@angular/core';
 import { emit } from 'process';
 import { navbarData } from './nav-data';
-
 interface SideNavToggle{
   screenWidth:number;
   collapsed:boolean;
-
 }
 @Component({
   selector: 'app-sidenav',
@@ -28,8 +26,6 @@ export class SidenavComponent implements OnInit {
       this.onToggleSideNav.emit({collapsed:this.collapsed, screenWidth:this.screenWidth});
     }
   }
-
-
   constructor() { }
 
   ngOnInit(): void {
@@ -39,9 +35,7 @@ export class SidenavComponent implements OnInit {
   closeSideNav():void{
     this.collapsed = false;
     this.onToggleSideNav.emit({collapsed:this.collapsed, screenWidth:this.screenWidth});
-
   }
-
   toggleCollapse():void{
     this.collapsed = !this.collapsed;
     this.onToggleSideNav.emit({collapsed:this.collapsed, screenWidth:this.screenWidth});

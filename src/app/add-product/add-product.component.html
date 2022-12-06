@@ -1,0 +1,68 @@
+<div *ngIf="loaderService.isLoading | async">
+    <mat-spinner style = "top:15%; left: 50%;" class = "loader-container"></mat-spinner>
+
+</div>
+<div class="body">
+<h1>Add Product</h1>
+<h4>Please enter following details to list a new product for bidding</h4>
+<form #productdetail = "ngForm" (ngSubmit) = "onClickSubmit(productdetail)" >
+<div class="row">
+
+    <div class="col">
+        <div class="form-floating mb-3">
+            <input ngModel type="text" class="form-control" name = "productname" id="floatingInput" placeholder="name@example.com" #productname = "ngModel">
+            <label for="floatingInput">Product Name</label>
+            <!-- <small *ngIf="!productname.valid && productname.touched"
+            >Fullname is required and must be a valid name</small
+          > -->
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="form-floating mb-3">
+            <textarea class="form-control" placeholder="Enter a short description here"
+                id="floatingTextarea" name = "shortdescription" ngModel></textarea>
+            <label for="floatingTextarea">Short Description</label>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <div class="form-floating mb-3">
+            <textarea class="form-control" placeholder="Leave a comment here" name = "detaileddescription" id="floatingTextarea" ngModel></textarea>
+            <label for="floatingTextarea">Detailed Description</label>
+        </div>
+    </div>
+    <div class="col">
+        <div class="form-floating mb-3">
+            <input class="form-control" type="number" id="startingprice" name="startingprice" min="1" max="99999" ngModel>
+            <label for="startingprice">Starting Price</label>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <div class="form-floating mb-3">
+            <select class="form-select" name = "category" id="floatingSelect" aria-label="Floating label select example"
+                backgroun-color="red" ngModel>
+                <option selected>Select category</option>
+                <option value="Painting">Painting</option>
+                <option value="Sculptor">Sculptor</option>
+                <option value="Ornament">Ornament</option>
+            </select>
+            <label for="floatingSelect">Category</label>
+        </div>
+    </div>
+    <div class="col">
+        <div class="form-floating mb-3">
+            <input class="form-control" type="datetime-local" id="bidenddate" name="bidenddate" ngModel>
+            <label for="bidenddate">Bid end date</label>
+
+        </div>
+    </div>
+</div>
+<div class="d-flex justify-content-between">
+    <button type="submit" class="btn">Add Product</button>
+</div>
+</form>
+</div>

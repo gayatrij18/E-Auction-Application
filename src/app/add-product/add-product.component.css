@@ -1,0 +1,39 @@
+
+.body{
+        background: #f4f7fa;
+}
+.row {
+    /* background: #f6f6f6;
+    border: 1px solid #ccc; */
+    overflow: hidden;
+    padding: 10px;
+}
+.col {
+    float: left;
+    width: 50%
+}
+.btn{
+    background-color: #263238;
+    /* box-shadow: 0.063rem 0 1.25rem 0 #8690a3; */
+    color: #fff;
+    
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+small {
+    color: red;
+}
+
+.loader-container{
+    position: absolute;
+    
+    opacity: 0.8;
+    z-index: 99;
+
+    
+  }
+
+

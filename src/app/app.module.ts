@@ -12,10 +12,11 @@ import {MatListModule}  from '@angular/material/list';
 
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
+
 import {MatSortModule} from '@angular/material/sort';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ViewProductsComponent } from './view-products/view-products.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -29,7 +30,18 @@ import { CouponsComponent } from './coupons/coupons.component';
 import { PagesComponent } from './pages/pages.component';
 import { MediaComponent } from './media/media.component';
 import { SettingsComponent } from './settings/settings.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DialogBoxComponent } from './dialog-box/dialog-box.component';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { InterceptorService } from './loader/interceptor.service';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
+
+
 //import {MatTableDataSource} from '@angular/material/table';
+
 
 
 
@@ -48,7 +60,9 @@ import { SettingsComponent } from './settings/settings.component';
     CouponsComponent,
     PagesComponent,
     MediaComponent,
-    SettingsComponent
+    SettingsComponent,
+    AddProductComponent,
+    DialogBoxComponent
   ],
   imports: [
     BrowserModule,
@@ -65,12 +79,15 @@ import { SettingsComponent } from './settings/settings.component';
     MatFormFieldModule,
     MatInputModule,
     MatListModule,
-    ReactiveFormsModule
-
-
-    
+    ReactiveFormsModule,
+    MatSnackBarModule,
+    MatDialogModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule
+ ],
+  providers: [
+    { provide:HTTP_INTERCEPTORS, useClass:InterceptorService, multi:true }
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
